@@ -1,8 +1,10 @@
 // API service for handling all backend requests
-const API_BASE_URL = 'http://localhost:3001/api'
+const API_BASE_URL = process.env.REACT_APP_API_URL
+  ? `${process.env.REACT_APP_API_URL}/api`
+  : 'http://localhost:3001/api'
 
 class ApiService {
-  // Search for tracks (used for autocomplete)
+  // Search for tracks
   static async searchTracks(query) {
     if (!query || query.trim() === '') {
       return { tracks: { items: [] } }
