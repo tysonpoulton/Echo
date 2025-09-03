@@ -1,6 +1,6 @@
 // API service for handling all backend requests
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://echo-recommendations.onrender.com/'
+  ? 'https://echo-recommendations.onrender.com/api'
   : 'http://localhost:3001/api'
 
 class ApiService {
